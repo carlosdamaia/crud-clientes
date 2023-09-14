@@ -9,11 +9,11 @@ public class ConnectionFactory {
 	
 	private static final String PASSWORD = "root";
 	
-	private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/cliente";
+	private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/dados";
 	
 	public static Connection createConnectionToMySql() throws Exception {
 		
-		Class.forName("com..mysql.jdbc.Driver");
+		Class.forName("com.mysql.cj.jdbc.Driver");
 		
 		Connection connection = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
 		
